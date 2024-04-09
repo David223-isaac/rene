@@ -1,5 +1,5 @@
 <?php
-require_once("connection.php");
+require_once "connection.php";
 
 class Pelicula extends Conexion
 {
@@ -26,7 +26,7 @@ class Pelicula extends Conexion
         $id = $_POST['id'];
 
         // Preparar la sentencia SQL con placeholders
-        $this->sentencia = "DELETE FROM usuarios WHERE id=?";
+        $this->sentencia = "DELETE FROM usuarios WHERE id=$id";
 
         // Ejecutar la sentencia preparada con el parámetro correspondiente
         // return $this->ejecutarSentencia(array($id));
@@ -34,13 +34,13 @@ class Pelicula extends Conexion
 
     public function modificar()
     {
-        $idm = $_POST['idm'];
+        // $idm = $_POST['idm'];
         $nombrem = $_POST['nombrem'];
         $apellidom = $_POST['apellidom'];
         $edadm = $_POST['edadm'];
 
         // Preparar la sentencia SQL con placeholders
-        $this->sentencia = "UPDATE usuarios SET nombre=?, apellido=?, edad=? WHERE id=?";
+        $this->sentencia = "UPDATE usuarios SET nombre=$nombrem, apellido=$apellidom, edad=$edadm WHERE id=?";
 
         // Ejecutar la sentencia preparada con los parámetros correspondientes
         // return $this->ejecutarSentencia(array($nombrem, $apellidom, $edadm, $idm));

@@ -1,5 +1,5 @@
 <?php
-require_once("sentencias.php");
+require_once "sentencias.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
