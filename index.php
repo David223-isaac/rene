@@ -1,6 +1,6 @@
 <?php
-    // require_once ("sentencias.php");
-    use App\sentencias; 
+    use App\sentencias;
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
