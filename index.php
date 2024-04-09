@@ -4,105 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Usuarios</title>
-<style type="text/css">
-* {
-    border: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-table {
-    text-align: center;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    height: 90%;
-    width: 90%;
-    align-items: center;
-}
-#reg {
-    margin: auto;
-    height: 50%;
-    width: 50%;
-    text-align: center;
-    border: solid 2px red;
-    background-color: #FCBF1E;
-    border-radius: 15px;
-}
-.base {
-    text-align: center;
-    align-items: center;
-}
-.forma1 {
-    margin: auto;
-    height: 50%;
-    width: 50%;
-    height: 100%;
-    width: 100%;
-}
-section {
-    text-align: center;
-    display: inline;
-}
-#eliminar {
-    margin: auto;
-    height: 50%;
-    width: 50%;
-    background-color: #0BA01B;
-    text-align: center;
-    border-radius: 15px;
-    border: solid 2px black;
-}
-.modificaru {
-    margin: auto;
-    background-color: #5AD57F;
-    text-align: center;
-    border-radius: 15px;
-    height: 50%;
-    width: 50%;
-    border: solid 2px black;
-}
-header {
-    height: 80px;
-    background-color: #264B41;
-}
-input {
-    border-radius: 8px;
-    background-color: black;
-    color: white;
-    border: solid 4px white;
-}
-input:hover {
-    background-color: darkred;
-    transition-duration: 2s;
-    height: 30px;
-}
-h1 {
-    color: #FFF808;
-    text-align: center;
-}
-table {
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    border: 1px solid #000;
-}
-th, td {
-    background-color: #D4AF37;
-    width: 25%;
-    text-align: center;
-    vertical-align: top;
-    border: 1px solid #000;
-    border-collapse: collapse;
-    padding: 0.3em;
-    caption-side: bottom;
-}
-caption {
-    padding: 0.3em;
-}
-body {
-    background-color: #509B87;
-    text-align: center;
-}
-</style>
+<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <header>
@@ -112,6 +14,7 @@ body {
 <br>
 <section>
 <div class="forma1">
+<img class="ImgRegistrar" src="https://cdn-icons-png.flaticon.com/512/6877/6877544.png">
 <form id="reg" action="" method="post">
     <h2>Registro de usuarios</h2>
     <br>
@@ -119,7 +22,7 @@ body {
     <input type="text" name="apellido" placeholder="apellido" required>*<br><br>
     <input type="text" name="edad" placeholder="edad" required>*<br><br>
     <br>
-    <input type="submit" name="boton" value="guardar">
+    <input type="submit" name="boton" value="Guardar">
     <br>
     <br>
     <?php
@@ -136,6 +39,7 @@ body {
 </div>
 <br>
 <div class="eliminaru">
+<img class="ImgRegistrar" src="https://cdn-icons-png.flaticon.com/512/2150/2150535.png">
 <form id="eliminar" action="" method="post">
     <h2>Eliminación de usuarios</h2>
     <br>
@@ -159,6 +63,7 @@ body {
 </div>
 <br>
 <div class="modificaru">
+<img class="ImgRegistrar" src="https://cdn-icons-png.flaticon.com/512/2808/2808392.png">
 <form id="modificar" action="" method="post">
     <h2>Modificación de usuarios</h2>
     <br>
@@ -167,7 +72,7 @@ body {
     <input type="text" name="apellidom" placeholder="nuev. apellido" required>*<br><br>
     <input type="text" name="edadm" placeholder="nuev. edad" required>*<br><br>
     <br>
-    <input type="submit" name="boton3" value="guardar">
+    <input type="submit" name="boton3" value="Guardar">
     <?php
     if(isset($_POST['boton3'])){
         require_once("sentencias.php");
@@ -184,6 +89,7 @@ body {
 </section>
 <br>
 <div class="base">
+<img class="ImgRegistrar" src="https://cdn-icons-png.flaticon.com/512/9977/9977386.png">
 <table>
     <h2>ESTADO ACTUAL DE LA TABLA</h2>
     <th>Id</th>
