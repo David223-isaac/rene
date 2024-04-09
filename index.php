@@ -97,14 +97,15 @@
     <th>Apellidos</th>
     <th>Edad</th>
     <?php
+    define("TD_END", "</td>");
     $obj = new pelicula();
     $res = $obj->consultar();
     while ($fila=$res->fetch_assoc()){
         echo "<tr>";
-        echo "<td>".$fila["id"].'</td>';
-        echo "<td>".$fila["nombre"].'</td>';
-        echo "<td>".$fila["apellido"].'</td>';
-        echo "<td>".$fila["edad"].'</td>';
+        echo "<td>".$fila["id"]. TD_END;
+        echo "<td>".$fila["nombre"]. TD_END;
+        echo "<td>".$fila["apellido"]. TD_END;
+        echo "<td>".$fila["edad"]. TD_END;
         echo "<tr>";
     }
     ?>
