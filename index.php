@@ -100,7 +100,7 @@
     define("TD_END", "</td>");
     $obj = new pelicula();
     $res = $obj->consultar();
-    while ($fila=$res->fetch_assoc()){
+    while ($fila=$res->fetch_assoc()) {
         echo "<tr>";
         echo "<td>".$fila["id"]. TD_END;
         echo "<td>".$fila["nombre"]. TD_END;
