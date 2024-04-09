@@ -44,7 +44,7 @@ class Pelicula extends Conexion
         $this->sentencia = "UPDATE usuarios SET nombre=?, apellido=?, edad=? WHERE id=?";
 
         // Ejecutar la sentencia preparada con los parámetros correspondientes
-        return $this->ejecutarSentencia(array($nombrem, $apellidom, $edadm, $idm));
+        // return $this->ejecutarSentencia(array($nombrem, $apellidom, $edadm, $idm));
     }
 
 }
