@@ -1,21 +1,23 @@
 <?php
 class Conexion
 {
-    public $url="localhost";
+    public $url = "localhost";
     public $usuario = "root";
-    public $password= "";
-    public $base="seguridad";
-    public $conexion="";
-    public $sentencia="";
+    public $password = "";
+    public $base = "seguridad";
+    public $conexion = "";
+    public $sentencia = "";
 
-    private function abrirConexion(){
-        $this->conexion=new mysqli($this->url, $this->usuario, $this->password, $this->base);
+    private function abrirConexion()
+    {
+        $this->conexion = new mysqli($this->url, $this->usuario, $this->password, $this->base);
     }
 
     private function cerrarConexion()
     {
         $this->conexion->close();
     }
+
     public function ejecutarSentencia($parametros = array())
     {
         $this->abrirConexion();
@@ -69,3 +71,4 @@ class Conexion
         }
     }
 }
+?>
