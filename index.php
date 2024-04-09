@@ -1,6 +1,5 @@
 <?php
-    use App\sentencias;
-    
+require_once("sentencias.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

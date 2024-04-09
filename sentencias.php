@@ -1,6 +1,5 @@
 <?php
-
-use App\connection;
+require_once("connection.php");
 
 class Pelicula extends Conexion
 {
