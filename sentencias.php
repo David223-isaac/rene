@@ -30,7 +30,7 @@ class Pelicula extends Conexion
         $this->sentencia = "DELETE FROM usuarios WHERE id=?";
 
         // Ejecutar la sentencia preparada con el parámetro correspondiente
-        return $this->ejecutarSentencia(array($id));
+        // return $this->ejecutarSentencia(array($id));
     }
 
     public function modificar()
