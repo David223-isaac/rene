@@ -71,4 +71,14 @@ class Conexion
         }
     }
 }
-?>
+
+class Pelicula extends Conexion
+{
+    public function insertar()
+    {
+        // Your insert logic here
+        $this->sentencia = "INSERT INTO usuarios VALUES (null, ?, ?, ?)";
+        $this->ejecutarSentencia([$nom, $apel, $edad]); // Assuming $nom, $apel, and $edad are defined
+    }
+}
+
