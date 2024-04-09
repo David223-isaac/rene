@@ -1,8 +1,8 @@
 <?php
 
-require_once ("connection.php");
+use App\connection;
 
-class Pelicula extends conexion
+class Pelicula extends Conexion
 {
 
     public function insertar()
@@ -16,7 +16,8 @@ class Pelicula extends conexion
         $this->ejecutarSentencia(array($nom, $apel, $edad));
     }
 
-    public function consultar() {
+    public function consultar()
+    {
         $this->sentencia = "SELECT * FROM usuarios";
         return $this->obtenerSentencia();
     }

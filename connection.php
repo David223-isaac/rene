@@ -1,27 +1,29 @@
-<?php 
-class conexion {
+<?php
+class Conexion
+{
     public $url="localhost";
     public $usuario = "root";
     public $password= "";
-    public $base="seguridad"; 
+    public $base="seguridad";
     public $conexion="";
-    public $sentencia=""; 
+    public $sentencia="";
 
     private function abrirConexion(){
-        $this->conexion=new mysqli($this->url,$this->usuario,$this->password,$this->base); 
+        $this->conexion=new mysqli($this->url, $this->usuario, $this->password, $this->base);
     }
 
-    private function cerrarConexion(){
-        $this->conexion->close(); 
+    private function cerrarConexion()
+    {
+        $this->conexion->close();
     }
-
-    public function ejecutarSentencia($parametros = array()){
+    public function ejecutarSentencia($parametros = array())
+    {
         $this->abrirConexion();
         // Preparar la sentencia con placeholders
         $stmt = $this->conexion->prepare($this->sentencia);
 
         // Verificar si la preparación de la sentencia fue exitosa
-        if($stmt) {
+        if ($stmt) {
             // Vincular parámetros a la sentencia preparada
             if (!empty($parametros)) {
                 $tipos = str_repeat('s', count($parametros)); // asume todos los parámetros son strings
@@ -37,13 +39,14 @@ class conexion {
         }
     }
 
-    public function obtenerSentencia($parametros = array()){
-        $this->abrirConexion(); 
+    public function obtenerSentencia($parametros = array())
+    {
+        $this->abrirConexion();
         // Preparar la sentencia con placeholders
         $stmt = $this->conexion->prepare($this->sentencia);
 
         // Verificar si la preparación de la sentencia fue exitosa
-        if($stmt) {
+        if ($stmt) {
             // Vincular parámetros a la sentencia preparada
             if (!empty($parametros)) {
                 $tipos = str_repeat('s', count($parametros)); // asume todos los parámetros son strings
@@ -66,4 +69,3 @@ class conexion {
         }
     }
 }
-?>
