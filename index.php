@@ -30,7 +30,7 @@
     <br>
     <?php
     if (isset($_POST['boton'])){
-        $obj=new pelicula();
+        $obj=new Pelicula();
         $obj->insertar();
         echo "<span> Los datos han sido ingresados</span>";
     }
@@ -51,7 +51,7 @@
     <br>
     <?php
     if (isset($_POST['boton2'])){
-        $obj=new pelicula();
+        $obj=new Pelicula();
         $obj->eliminar();
         echo "<span> Los datos han sido eliminados </span>";
         header("Location: index.php");
@@ -75,7 +75,7 @@
     <input type="submit" name="boton3" value="Guardar">
     <?php
     if (isset($_POST['boton3'])){
-        $obj=new pelicula();
+        $obj=new Pelicula();
         $obj->modificar();
         echo "<span> Los datos han sido modificados </span>";
         header("Location: index.php");
@@ -98,7 +98,7 @@
     <th>Edad</th>
     <?php
     define("TD_END", "</td>");
-    $obj = new pelicula();
+    $obj = new Pelicula();
     $res = $obj->consultar();
     while ($fila=$res->fetch_assoc()) {
         echo "<tr>";
