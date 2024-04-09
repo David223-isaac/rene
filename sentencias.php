@@ -34,7 +34,6 @@ class Pelicula extends Conexion
 
     public function modificar()
     {
-        // $idm = $_POST['idm'];
         $nombrem = $_POST['nombrem'];
         $apellidom = $_POST['apellidom'];
         $edadm = $_POST['edadm'];
